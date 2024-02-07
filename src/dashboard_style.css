@@ -1,0 +1,225 @@
+body {
+    background-color: #333; /* Cambiar el color de fondo del cuerpo */
+}
+
+#container {
+    padding: 40px; /* Aumentar el padding hacia arriba y abajo */
+    width: 800px; /* Aumentar el ancho */
+    margin: 50px auto; /* Centrar el contenedor horizontalmente */
+    border-radius: 10px; /* Agregar bordes redondeados */
+    overflow: hidden; /* Ocultar cualquier sombra o desbordamiento */
+}
+
+#drag-container {
+    background-color: #fff; /* Agregar fondo blanco solo al área de arrastre */
+    border-radius: 10px;
+    padding: 20px 40px; /* Ajustar el padding */
+    margin-bottom: 40px; /* Aumentar la separación entre el área de arrastre y la sección "About me" */
+}
+
+#about-me-container {
+    background-color: #fff; /* Agregar fondo blanco solo a la sección "About me" */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: none; /* Eliminar la sombra */
+    margin-bottom: 40px; /* Separar del siguiente contenedor */
+}
+
+#about-me h2 {
+    text-align: center; /* Centrar el título "About me" */
+    margin-bottom: 20px; /* Añadir espacio entre el título y el párrafo */
+    font-size: 32px; /* Aumentar el tamaño de fuente del título "About me" */
+    color: #000; /* Color de texto */
+}
+
+.graficas-container,
+.tablas-container {
+    background-color: #fff; /* Fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    box-shadow: none; /* Sin sombra */
+    margin-bottom: 40px; /* Separación desde la sección "About me" */
+}
+
+.graficas-container h2,
+.tablas-container h2 {
+    text-align: center; /* Centrar el título */
+    font-size: 32px; /* Tamaño de fuente */
+    margin-bottom: 20px; /* Espacio inferior */
+    color: #000; /* Color de texto */
+}
+
+.drop-text {
+    text-align: center; /* Centrar el texto */
+    font-size: 32px; /* Tamaño de fuente */
+    margin-bottom: 20px; /* Espacio entre el texto y el área de arrastre */
+    color: #000; /* Color del texto */
+}
+
+.drop-area {
+    border: 2px dashed #999;
+    border-radius: 5px;
+    padding: 20px; /* Reducir el padding */
+    text-align: center;
+    cursor: pointer;
+    height: 100px; /* Establecer la altura inicial */
+    transition: background-color 0.3s, height 0.3s; /* Agregar transición para el cambio de color de fondo y el aumento de altura */
+}
+
+.drop-area:hover {
+    background-color: #f0f0f0; /* Cambiar el color de fondo al pasar el cursor por encima */
+}
+
+.drop-area.dragover {
+    background-color: #f0f0f0; /* Cambiar el color de fondo al arrastrar un archivo */
+    height: 200px; /* Aumentar la altura al arrastrar un archivo */
+}
+
+.drop-instruction {
+    font-size: 16px;
+    color: #999;
+}
+
+#about-me {
+    font-size: 16px;
+    color: #000;
+}
+
+.avatar-image {
+    display: block; /* Para centrar la imagen */
+    margin: 0 auto; /* Para centrar horizontalmente */
+    width: 100px; /* Establecer el ancho */
+    height: 100px; /* Establecer la altura */
+}
+
+.social-links {
+    text-align: center; /* Centrar los elementos internos */
+    margin-top: 20px; /* Agregar un margen superior */
+}
+
+.social-link {
+    display: inline-block; /* Mostrar enlaces como elementos en línea */
+    margin: 0 10px; /* Agregar espacio entre los enlaces */
+}
+
+.social-icon {
+    width: 20px; /* Establecer el ancho */
+    height: 20px; /* Establecer la altura */
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro pero transparente */
+    width: 100%; /* Ancho completo del menú */
+    overflow: hidden; /* Evitar desbordamiento */
+    display: flex; /* Mostrar los elementos en línea horizontal */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    padding: 15px 0; /* Agregar padding arriba y abajo */
+    font-size: 18px; /* Aumentar el tamaño del texto */
+    position: fixed; /* Fijar el nav en la parte superior */
+    top: 0; /* Fijar en la parte superior */
+}
+
+nav ul {
+    list-style-type: none; /* Eliminar viñetas de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Mostrar los elementos de la lista en línea horizontal */
+}
+
+nav li {
+    margin-right: 20px; /* Espacio entre los elementos del menú */
+}
+
+/* Estilo para los enlaces del menú */
+nav a {
+    color: white; /* Color de texto */
+    text-align: center; /* Centrar el texto */
+    padding: 14px 16px; /* Espaciado interno */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+}
+
+/* Cambiar el color de fondo de los enlaces al pasar el cursor sobre ellos */
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#bottom-nav {
+    background-color: #444; /* Cambiar el color de fondo del menú a un gris más oscuro */
+    width: 100%; /* Ancho completo del menú */
+    overflow: hidden; /* Evitar desbordamiento */
+    display: flex; /* Mostrar los elementos en línea horizontal */
+    justify-content: center; /* Centrar horizontalmente los elementos */
+    padding: 15px 0; /* Agregar padding arriba y abajo */
+    font-size: 18px; /* Aumentar el tamaño del texto */
+    position: static; /* Eliminar la posición fija para que no se fije en la parte superior */
+}
+
+#bottom-nav ul {
+    list-style-type: none; /* Eliminar viñetas de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Mostrar los elementos de la lista en línea horizontal */
+    align-items: center; /* Alinear verticalmente los elementos */
+}
+
+#bottom-nav li {
+    margin-right: 20px; /* Espacio entre los elementos del menú */
+}
+
+/* Estilo para los enlaces del menú */
+#bottom-nav a {
+    color: white; /* Color de texto */
+    text-align: center; /* Centrar el texto */
+    padding: 14px 16px; /* Espaciado interno */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+}
+
+/* Cambiar el color de fondo de los enlaces al pasar el cursor sobre ellos */
+#bottom-nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas con el mismo ancho */
+    grid-gap: 20px; /* Espacio entre los elementos */
+    margin-bottom: 40px; /* Margen inferior de 20px */
+}
+
+.grid-item {
+    background-color: orange; /* Color de fondo naranja */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor apuntando */
+    text-align: center; /* Texto centrado */
+    color: white; /* Color de texto blanco */
+    transition: background-color 0.3s; /* Transición suave para el cambio de color de fondo */
+}
+
+.grid-item:hover {
+    background-color: #4CAF50; /* Cambio de color al pasar el cursor (verde) */
+}
+
+.cell-image {
+    max-width: 200px; /* Limitar el ancho máximo de la imagen al doble */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    display: block; /* Para centrar la imagen */
+    margin: 0 auto; /* Centrar horizontalmente la imagen */
+}
+
+/* Estilos para el slider */
+input[type="range"] {
+    width: 80%; /* Ancho del slider */
+    margin: 0 auto; /* Centrar horizontalmente */
+    display: block;
+}
+
+/* Estilos para mostrar el valor seleccionado */
+.slider-value {
+    text-align: center; /* Centrar texto */
+    margin-top: 10px; /* Espacio superior */
+    font-size: 16px; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
+}
