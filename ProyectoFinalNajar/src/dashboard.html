@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrastrar y soltar CSV</title>
+    <link rel="stylesheet" href="dashboard_style.css">
+    <script src="https://gmousse.github.io/dataframe-js/dist/dataframe.min.js"></script>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#drag-container">Introducción</a></li>
+            <li id="graficas-tab-top" style="display: none;"><a href="#graficas-container">Gráficas</a></li>
+            <li id="tablas-tab-top" style="display: none;"><a href="#tablas-container">Tablas</a></li>
+            <li><a href="#about-me-container">About Me</a></li>
+            <li><a href="../index.html">Exit</a></li>
+        </ul>
+    </nav>
+    <div id="container">
+        <!-- Contenedor para el área de arrastre -->
+        <div id="drag-container">
+            <!-- Texto "Selector de archivo" como h2 -->
+            <h2 class="drop-text">Introducción</h2>
+            <!-- Área de arrastre -->
+            <div id="drop-area" class="drop-area">
+                <div class="drop-instruction">Haz clic o arrastra un archivo CSV aquí</div>
+                <input type="file" id="file-input" style="display: none;" accept=".csv">
+            </div>
+        </div>
+        <!-- Nuevo div para los apartados -->
+        <div id="grid-container" style="display: none;">
+            <div class="grid-item" onclick="window.location.href='#graficas-container'">
+                <h2>Gráficas</h2>
+                <p>Texto de ejemplo para gráficas</p>
+                <img src="../imgs/icono_graficas.png" alt="Graficas" class="cell-image">
+            </div>
+            <div class="grid-item" onclick="window.location.href='#tablas-container'">
+                <h2>Tablas</h2>
+                <p>Texto de ejemplo para tablas</p>
+                <img src="../imgs/icono_tablas.png" alt="Tablas" class="cell-image">
+            </div>
+            <div class="grid-item" onclick="window.location.href='#about-me-container'">
+                <h2>About Me</h2>
+                <p>Texto de ejemplo para About Me</p>
+                <img src="../imgs/icono_aboutme.png" alt="Sobre mi" class="cell-image">
+            </div>
+            <div class="grid-item" onclick="window.location.href='../index.html'">
+                <h2>Exit</h2>
+                <p>Texto de ejemplo para salir</p>
+                <img src="../imgs/icono_exit.png" alt="Salir" class="cell-image">
+            </div>
+        </div>
+        <!-- Contenedor para la sección "Gráficas" -->
+        <div id="graficas-container" class="graficas-container" style="display: none;">
+            <h2>Gráficas</h2>
+            <input type="range" id="graficas-slider" min="2009" max="2023" value="2009">
+            <span id="graficas-slider-value" class="slider-value">2009</span>
+            <!-- Aquí puedes agregar contenido relacionado con las gráficas -->
+        </div>
+        
+        <!-- Contenedor para la sección "Tablas" -->
+        <div id="tablas-container" class="graficas-container" style="display: none;">
+            <h2>Tablas</h2>
+            <input type="range" id="tablas-slider" min="2009" max="2023" value="2009">
+            <span id="tablas-slider-value" class="slider-value">2009</span>
+            <!-- Aquí puedes agregar contenido relacionado con las tablas -->
+        </div>
+        <!-- Contenedor para la sección "About me" -->
+        <div id="about-me-container">
+            <!-- Sobre mí -->
+            <div id="about-me">
+                <h2>About me</h2>
+                <p>Soy un apasionado desarrollador web con más de cinco años de experiencia en la industria. Durante mi carrera, he trabajado en una amplia gama de proyectos, desde sitios web simples hasta aplicaciones web complejas. Tengo habilidades sólidas en HTML, CSS y JavaScript, así como experiencia en frameworks como React y Vue.js. Además, tengo experiencia en diseño web responsivo y desarrollo de aplicaciones móviles con tecnologías como React Native.</p>
+                <p>Me considero una persona autodidacta y siempre estoy buscando aprender nuevas tecnologías y mejorar mis habilidades. Soy un solucionador de problemas creativo y me encanta enfrentarme a desafíos complejos. Además, disfruto trabajando en equipo y colaborando con otros para lograr resultados excepcionales.</p>
+                <p>En mi tiempo libre, me gusta contribuir a proyectos de código abierto, participar en hackatones y seguir cursos en línea para estar al tanto de las últimas tendencias en desarrollo web. Estoy emocionado de seguir creciendo en mi carrera como desarrollador web y enfrentar nuevos desafíos que me permitan expandir mis habilidades y conocimientos.</p>
+                <!-- Imagen -->
+                <img src="../imgs/icono_avatar.png" alt="Avatar" class="avatar-image">
+                <!-- Enlaces a redes sociales -->
+                <div class="social-links">
+                    <a href="https://twitter.com/?lang=es" class="social-link"><img src="../imgs/twitter.png" alt="Twitter" class="social-icon"></a>
+                    <span class="social-text"><a href="https://twitter.com/?lang=es">Twitter</a></span>
+                    <a href="https://www.facebook.com/?locale=es_ES" class="social-link"><img src="../imgs/Facebook.png" alt="Facebook" class="social-icon"></a>
+                    <span class="social-text"><a href="https://www.facebook.com/?locale=es_ES">Facebook</a></span>
+                    <a href="https://github.com/" class="social-link"><img src="../imgs/Github.png" alt="GitHub" class="social-icon"></a>
+                    <span class="social-text"><a href="https://github.com/">GitHub</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav id="bottom-nav">
+        <ul>
+            <li><a href="#drag-container">Introducción</a></li>
+            <li id="graficas-tab-bottom" style="display: none;"><a href="#graficas-container">Gráficas</a></li>
+            <li id="tablas-tab-bottom" style="display: none;"><a href="#tablas-container">Tablas</a></li>
+            <li><a href="#about-me-container">About Me</a></li>
+            <li><a href="../index.html">Exit</a></li>
+            <li><a href="https://twitter.com/?lang=es" class="social-link"><img src="../imgs/twitter.png" alt="Twitter" class="social-icon"></a></li>
+            <li><a href="https://www.facebook.com/?locale=es_ES" class="social-link"><img src="../imgs/Facebook.png" alt="Facebook" class="social-icon"></a></li>
+            <li><a href="https://github.com/" class="social-link"><img src="../imgs/Github.png" alt="GitHub" class="social-icon"></a></li>
+        </ul>
+    </nav>
+    <script src="dashboard_script.js"></script>
+</body>
+</html>
